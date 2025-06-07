@@ -13,8 +13,14 @@ El operario puede controlar el sistema mediante pulsadores que activan el proces
 ## Modo 1
 Funciona como un ciclo automático de producción por lote. El operario solo necesita presionar un botón de inicio para que el sistema ejecute todo el proceso. El cual consta de: Apertura de la válvula hasta llenar el tanque, activación del agitador por 10 segundos, activación del calefactor por 15 segundos, apertura de la válvula de descarga hasta vaciado total del tanque.
 
+<div align="center"><img src="https://github.com/user-attachments/assets/df8a8f6c-3226-4acc-acd4-11b8b9106849" style="width:50%;height:50%;text-align:center;"></img></div>
+
+Siguiendo el diagrama anterior, la operación es de la siguiente manera: El operador acciona el botón `START`. Comienza el proceso de carga del tanque con el líquido 1. Al llenarse, se cierra la válvula correspondiente, se enciende el mezclador y se dispara un temporizador de 10 segundos. Al pasar este tiempo, se apaga el mezclador, se enciende el calentador y se dispara otro temporizador de 15 segundos. Pasados los 15 segundos, se apaga el calentador y se procede a vaciar el tanque para volver a iniciar el proceso.
+
+La operación se puede frenar con el botón `STOP`. Se completa el ciclo actual y se detiene. Para volver a iniciar, se debe volver a accionar `START`. Para ejecutar esta simulación, cargar el archivo `g4_batch_b_modo_1.rsl` en el LogixPro.
+
 ## Modo 2
-Este modo requiere intervención del operario. Se ejecuta por pasos, cada uno activado manualmente mediante el botón enter. Se llena el tanque con la primera válvula hasta el nivel medio, luego de la segunda válvula se completa hasta llenar el tanque. A continuación activa el agitador durante 10 segundos. cuando finalice se activa el calefactor durante 15 segundos. y con el botón de stop se vacía el tanque por completo.
+Este modo requiere intervención del operario. Se ejecuta por pasos, cada uno activado manualmente mediante el botón`ENTER`. Se llena el tanque con la primera válvula hasta el nivel medio, luego de la segunda válvula se completa hasta llenar el tanque. A continuación activa el agitador durante 10 segundos. cuando finalice se activa el calefactor durante 15 segundos. y con el botón de stop se vacía el tanque por completo.
 
 ## Modo 3
 El usuario selecciona entre 3 tipos de productos con diferentes proporciones de agua y aditivos, además de tiempo de agitación o calentamiento.
