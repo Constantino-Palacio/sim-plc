@@ -50,4 +50,4 @@ La lógica de preparación de cada producto es muy similar, a excepción de las 
 - 30%: 84 pulsos
 - 20%: 56 pulsos
 
-La ejecución es totalmente automática: una vez accionado `START`, se repite el ciclo seleccionado indefinidamente. Se puede, al igual que en el modo 1, detener el proceso al terminar el ciclo actual accionando la entrada `STOP`.
+La ejecución es totalmente automática: una vez accionado `START`, se repite el ciclo seleccionado indefinidamente. Se puede, al igual que en el modo 1, detener el proceso al terminar el ciclo actual accionando la entrada `STOP`. Para ejecutar esta simulación, cargar el archivo `g4_batch_b_modo_3_2.3.rsl` en el LogixPro.
