@@ -29,3 +29,25 @@ El usuario selecciona entre 3 tipos de productos con diferentes proporciones de 
 - Producto C: 80% válvula 1 / 20% válvula 2 – 5s agitado – sin calefacción.
 
 La selección se hace con pulsadores y el sistema ejecuta automáticamente la secuencia según el tipo elegido.
+
+<div align="center"><img src="https://github.com/user-attachments/assets/58b09d7c-0bd0-4f6c-8ab7-453e79df491b" style="width:50%;height:50%;text-align:center;"></img></div>
+
+La imagen anterior muestra el programa principal. Cada unos de los bloques de subrutina se corresponde con cada uno de los siguientes diagramas.
+
+Preparación de producto A:
+<div align="center"><img src="https://github.com/user-attachments/assets/119dbae7-5511-4ddd-a2af-75caa3cd22a9" style="width:50%;height:50%;text-align:center;"></img></div>
+
+Preparación de producto B:
+<div align="center"><img src="https://github.com/user-attachments/assets/966acb56-1b42-41cb-81fc-c210d56d9fb2" style="width:50%;height:50%;text-align:center;"></img></div>
+
+Preparación de producto C: no requiere calentamiento.
+<div align="center"><img src="https://github.com/user-attachments/assets/a436c9ae-33ee-4ca5-80b9-4740854890dc" style="width:50%;height:50%;text-align:center;"></img></div>
+
+La lógica de preparación de cada producto es muy similar, a excepción de las proporciones de fluido y tiempos de mezcla y calentamiento. Las proporciones de líquido se calculan mediante el medidor de flujo correspondiente. Se asume un valor de 280 pulsos de este medidor para un tanque lleno, así que se calcula para cada caso:
+- 80%: 224 pulsos
+- 70%: 196 pulsos
+- 50%: 140 pulsos
+- 30%: 84 pulsos
+- 20%: 56 pulsos
+
+La ejecución es totalmente automática: una vez accionado `START`, se repite el ciclo seleccionado indefinidamente. Se puede, al igual que en el modo 1, detener el proceso al terminar el ciclo actual accionando la entrada `STOP`.
